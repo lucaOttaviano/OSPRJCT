@@ -1,0 +1,80 @@
+*{
+    color: white
+}
+
+#general {
+    min-height: 100vh;
+    background-color: #222831;
+
+    #notesList {
+        height: 80vh;
+        overflow-y: scroll;
+        background-color: #303743;
+        // border: solid 4px #614AD3;
+        border-radius: 30px;
+
+        #notesListTitle {
+            height: 80px;
+
+            span {
+                color: white
+            }
+        }
+
+        #createFirstNote {
+            background-color: #614AD3;
+            border-radius: 30px;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        .noteCard {
+            height: 100px;
+            background-color: #614AD3;
+            border-radius: 30px;
+        }
+    }
+
+    #txtareasContainer {
+        height: 80vh;
+
+        #newNoteFieldTitle {
+            height: 50px;
+            border-radius: 30px;
+            background-color: #303743
+        }
+
+        #newNoteField {
+            min-height: 70vh;
+            border-radius: 30px;
+            background-color: #303743;
+        }
+    }
+}
+
+
+::-webkit-scrollbar {
+    width: 10px;
+    display: none
+}
+
+// remove default style from textarea
+textarea {
+    border: none;
+    overflow: auto;
+    outline: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    resize: none;;
+}
+
+.modifying {
+    background-color: #462eb1 !important;
+    transform: scale(1.1);
+}
+
+i {
+    color: #614AD3;
+}

@@ -1,1 +1,26 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+// import for calendar style
+@import "../node_modules/angular-calendar/css/angular-calendar.css";
+
+* {
+    font-family: 'Open Sans' !important;
+}
+
+.common {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+:root {
+    --neumorphismShadow: -5px -5px 9px #303030, 5px 5px 9px #101010;
+}
+
+.mainHover {
+    transition: 0.2s;
+
+    &:hover {
+        transform: scale(1.2);
+    }
+}

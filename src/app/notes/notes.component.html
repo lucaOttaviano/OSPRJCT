@@ -1,0 +1,44 @@
+<div id="general" class="col-12">
+    <div class="d-flex justify-content-start">
+        <span class="h1 mt-5 col-12 text-center">Bloc notes</span>
+    </div>
+
+    <div class="common gap-3 mt-3">
+        <div id="notesList" class="col-5 pb-5 d-flex flex-column gap-3 shadow ">
+
+            <div id="notesListTitle" class="col-12 mb-3 common">
+                <span class="h3 mt-5">Your notes</span>
+            </div>
+
+            <!-- notes cards -->
+            <div [id]="idOfNote[i]" *ngFor="let note of savedNotes; let i = index" (click)="modifyNote(i)"
+                class="noteCard col-8 offset-2 shadow common">
+                <p class="p-3">{{note.title}}</p>
+            </div>
+
+
+            <!-- if there aren't saved notes yet -->
+            <div id="createFirstNote" class="col-4 offset-4 common mt-5 mainHover shadow"
+                *ngIf="notes.length == 0 && savedNotes.length == 0" (click)="initialNewNote()">
+                <span class="container-fluid text-center p-3">You haven't saved any notes yet, click
+                    here to create first</span>
+            </div>
+        </div>
+
+        <div *ngIf="notes.length > 0 || savedNotes.length > 0" id="txtareasContainer"
+            class="d-flex justify-content-center flex-column col-5">
+            <textarea id="newNoteFieldTitle" class="p-3 h6 common shadow container-fluid text-center"
+                placeholder="Title"></textarea>
+            <textarea id="newNoteField" class="p-4 h6 common shadow container-fluid" placeholder="New note"></textarea>
+        </div>
+
+        <!-- save note btn -->
+        <div *ngIf="notes.length > 0 || savedNotes.length > 0" id="operationsButtons" class="flex-column col-1 common">
+            <i (click)="saveNote()" class="mainHover bi bi-check-circle h1"></i>
+            <i (click)="newNote()" class="mainHover bi bi-plus-circle h1 "></i>
+            <i *ngIf="modifying" (click)="deleteNote()" class="mainHover bi bi-x-circle h1 "></i>
+        </div>
+
+    </div>
+
+</div>

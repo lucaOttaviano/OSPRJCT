@@ -1,0 +1,31 @@
+* {
+    color: #37c5bd;
+}
+
+#general {
+    min-height: 100vh;
+    background: rgb(18, 32, 40);
+    background: linear-gradient(145deg, rgba(18, 32, 40, 1) 0%, rgba(66, 118, 119, 1) 100%);
+    #calculator {
+        background-color: #172d36;
+        border-radius: 30px;
+    }
+}
+
+.form-control {
+    height: 30px;
+    border: none;
+    background-color: transparent;
+    border-radius: 30px;
+
+}
+
+.operations {
+    border-radius: 30px;
+    color: #37c5be9a;
+    background-color: #1b3849;
+}
+
+.number {
+    color: white
+}

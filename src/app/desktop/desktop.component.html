@@ -1,0 +1,5 @@
+<div id="general" class="common bg-warning gap-4">
+    <div draggable="true" class="icon shadow mainHover" *ngFor="let icon of icons; let i = index">
+        <i [class]="icon" class="bi h-100 common h1" [routerLink]="'/' + routerLinks[i]"></i>
+    </div>
+</div>

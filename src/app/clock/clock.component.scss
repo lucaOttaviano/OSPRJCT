@@ -1,0 +1,105 @@
+* {
+    color: white;
+}
+
+#general {
+    min-height: 100vh;
+    background-color: #282828;
+
+    #alarmDiv {
+        #alarmTitle{
+            color: #FEC336;
+            letter-spacing: 1px;
+            font-weight: bold;
+        }
+        #clock {
+            border-radius: 50%;
+            width: 250px;
+            height: 250px;
+            box-shadow: var(--neumorphismShadow);
+            
+            color: #FEC336;
+        }
+    }
+     #timerDiv {
+        #alarmTitle{
+            color: #FEC336;
+            letter-spacing: 1px;
+            font-weight: bold;
+        }
+        #clock {
+            border-radius: 50%;
+            width: 250px;
+            height: 250px;
+            box-shadow: var(--neumorphismShadow);
+            color: #FEC336;
+        }
+    }
+    #alarmsList{
+        max-height: 80vh;
+        overflow-y: scroll;
+        border-radius: 30px;
+        box-shadow: var(--neumorphismShadow);
+
+        #settedAlarm {
+            background-color: #282828;
+            span {
+                color: #FEC336
+            }
+        }
+
+        #operationsButtons{
+            box-shadow: var(--neumorphismShadow);
+            border-radius: 30px;
+            color: #FEC336;
+        }
+    }
+}
+
+.neumorphismBtn {
+    border-radius: 10px;
+    box-shadow: var(--neumorphismShadow);
+    background-color: #282828;
+    border-bottom: solid 3px #FEC336;
+    transition: 0.2s;
+
+    &:hover {
+        background-color: #FEC336;
+        border: none;
+        border-bottom: solid 3px #FEC336;
+        cursor: pointer;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+input {
+    background-color: #282828;
+    border: none;
+    border-radius: 30px;
+    box-shadow: var(--neumorphismShadow);
+
+    &:focus {
+        border: none;
+        outline: none;
+        appearance: none;
+    }
+}
+
+// make the clock of the time inputs white
+input[type="time"]::-webkit-calendar-picker-indicator {
+    filter: invert(100%);
+}
+
+
+::-webkit-scrollbar {
+    width: 10px;
+    display: none
+}
+
+
+
+// darkGrey
+// #171717

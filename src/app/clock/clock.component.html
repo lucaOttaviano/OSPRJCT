@@ -1,0 +1,26 @@
+<div id="general" class="d-flex justify-content-evenly align-items-center col-12">
+    <div id="alarmDiv" class="col-3 common flex-column">
+        <!-- <div id="alarmTitle" class="col-12 text-center mb-5 h3">Alarm</div> -->
+        <div id="clock" class="h1 p-5 common">{{currentTime}}</div>
+        <div class="col-10 d-flex justify-content-around mt-5">
+            <input id="alarmTime" type="time" value="00:00:00" step="1" class="py-2 px-3">
+        </div>
+        <div id="setAlarmBtn" class="neumorphismBtn mt-5 py-2 px-3" (click)="setAlarm()">Set alarm</div>
+    </div>
+
+    <!-- List of saved alarms -->
+    <div id="alarmsList" *ngIf="alarms.length > 0" class="d-flex justify-content-start flex-column col-4 py-4">
+        <div *ngFor="let alarm of alarms; let i = index" id="settedAlarm" class="common py-3 col-6 offset-3">
+            <i id="operationsButtons" class="bi bi-trash h6 mainHover p-3" (click)="deleteAlarm(i)"></i>
+            <div class="common flex-column col-10">
+                <p class="h5">
+                    {{'Alarm ' + (i+1)}}
+                </p>
+                <span>
+                    {{alarm}}
+                </span>
+            </div>
+            <i id="operationsButtons" class="bi bi-pencil h6 mainHover p-3" (click)="modifyAlarm(i)"></i>
+        </div>
+    </div>
+</div>
